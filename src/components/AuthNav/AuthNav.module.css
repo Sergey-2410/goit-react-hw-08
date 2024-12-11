@@ -1,0 +1,8 @@
+.authNav {
+  display: flex;
+  gap: 20px;
+}
+.nLink {
+  text-decoration: none;
+  color: black;
+}
