@@ -5,8 +5,9 @@ import ContactForm from './ContactForm/ContactForm';
 import SearchBox from './SearchBox/SearchBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from '../redux/contactsOps';
-import { selectIsError, selectIsLoading } from '../redux/contactsSlice';
+import { fetchContacts } from '../redux/contacts/operations';
+import { selectIsError, selectIsLoading } from '../redux/contacts/selectors';
+// import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -26,5 +27,8 @@ const App = () => {
       <ContactList />
     </div>
   );
+  // <Routes>
+  //   <Route></Route>
+  // </Routes>;
 };
 export default App;
