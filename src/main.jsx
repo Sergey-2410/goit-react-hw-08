@@ -30,7 +30,7 @@ createRoot(document.getElementById('root')).render(
 
               // Default options for specific types
               success: {
-                duration: 5000,
+                duration: 3000,
                 theme: {
                   primary: 'green',
                   secondary: 'black',

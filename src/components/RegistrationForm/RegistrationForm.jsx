@@ -11,7 +11,7 @@ const RegistrationForm = () => {
     dispatch(register(values))
       .unwrap()
       .then(res => {
-        toast(`welcome ${res.user.name}`, navigate('/contacts'));
+        toast.success(`Welcome ${res.user.name}!`, navigate('/contacts'));
       })
       .catch(() => {
         toast.error('Sorry, such an account already exists');

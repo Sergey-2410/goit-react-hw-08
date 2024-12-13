@@ -4,11 +4,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/auth/operations';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { Navigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+
 const LoginForm = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
   const handleSubmit = (values, options) => {
-    dispatch(login(values));
+    dispatch(login(values))
+      .unwrap()
+      .then(() => {
+        toast.success('Login successful! Glad to see you again!');
+      })
+      .catch(() => {
+        toast.error('Incorrect login or password!');
+      });
     options.resetForm();
   };
   const initialValues = {
@@ -19,6 +28,7 @@ const LoginForm = () => {
   if (isLoggedIn) {
     return <Navigate to="/contacts" />;
   }
+
   return (
     <div className={s.wrapper}>
       <h2>Login</h2>
