@@ -3,6 +3,11 @@
   gap: 20px;
 }
 .nLink {
+  font-size: 24px;
+  font-weight: bold;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+.nLink:hover {
+  color: #ffd600;
 }

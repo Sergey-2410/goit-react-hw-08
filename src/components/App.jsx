@@ -32,22 +32,22 @@ const App = () => {
             </PrivateRoute>
           }
         />
-        <Route
-          path="login"
-          element={
-            <RestrictedRoute component={<LoginPage />} redirectTo="/contacts" />
-          }
-        />
-        <Route
-          path="register"
-          element={
-            <RestrictedRoute
-              component={<RegistrationPage />}
-              redirectTo="/contacts"
-            />
-          }
-        />
       </Route>
+      <Route
+        path="register"
+        element={
+          <RestrictedRoute
+            component={<RegistrationPage />}
+            redirectTo="/contacts"
+          />
+        }
+      />
+      <Route
+        path="login"
+        element={
+          <RestrictedRoute component={<LoginPage />} redirectTo="/contacts" />
+        }
+      />
     </Routes>
   );
 };

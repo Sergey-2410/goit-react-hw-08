@@ -33,7 +33,7 @@ createRoot(document.getElementById('root')).render(
                 duration: 3000,
                 theme: {
                   primary: 'green',
-                  secondary: 'black',
+                  secondary: 'white',
                 },
               },
             }}

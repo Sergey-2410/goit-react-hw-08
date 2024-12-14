@@ -29,14 +29,25 @@ const RegistrationForm = () => {
       <h2>Register</h2>
       <Formik onSubmit={handleSubmit} initialValues={initialValues}>
         <Form className={s.form}>
-          <Field name="name" placeholder="Enter name"></Field>
-          <Field name="email" placeholder="Enter email"></Field>
           <Field
+            className={s.input}
+            name="name"
+            placeholder="Enter name"
+          ></Field>
+          <Field
+            className={s.input}
+            name="email"
+            placeholder="Enter email"
+          ></Field>
+          <Field
+            className={s.input}
             name="password"
             type="password"
             placeholder="Enter password"
           ></Field>
-          <button type="submit">Submit</button>
+          <button className={s.btn} type="submit">
+            Submit
+          </button>
         </Form>
       </Formik>
     </div>
