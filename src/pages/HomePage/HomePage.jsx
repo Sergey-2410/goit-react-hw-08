@@ -37,7 +37,6 @@ const HomePage = () => {
           textAlign: 'center',
         }}
       >
-        {/* Приветствие с анимацией */}
         <Typography
           variant="h2"
           sx={{
@@ -51,7 +50,6 @@ const HomePage = () => {
           Welcome to Your PhoneBook
         </Typography>
 
-        {/* Картинка с анимацией */}
         <Box
           component="img"
           src="https://cdn-icons-png.flaticon.com/512/3145/3145765.png"
